@@ -13,6 +13,7 @@ class FakeDataGenerator:
         Initializes the FakeDateGenerator Class
         """
         self.id_number = None
+        self.date_value = None
 
     def first_name(self) -> str:
         """
@@ -61,7 +62,7 @@ class FakeDataGenerator:
         self.id_number += step
         return str(current_id)
 
-    def date(self, start_date: str, end_date: str) -> str:
+    def date(self, start_date: str, end_date: str) -> datetime.date:
         """
         Returns a random date
 
@@ -70,7 +71,7 @@ class FakeDataGenerator:
             end_date (str): The upper limit of the date range. eg 2023-01-31
 
         Returns:
-            str:  random date
+            datetime.date:  random date
         """
         # spliting the dates by "-" to turn it into a datetime object
         list_start_date = start_date.split("-")
@@ -86,7 +87,8 @@ class FakeDataGenerator:
 
         # return random date between start and end
         # multiplying my random float gives a random date value
-        return start + (end - start) * random()
+        self.date_value = start + (end - start) * random()
+        return self.date_value
 
     def value_from_list(self, values: list) -> str:
         """
@@ -119,3 +121,51 @@ class FakeDataGenerator:
             return int(random_number)
         else:
             return random_number
+
+    def campaign_name(
+        self, country_list: list, funnel_list: list, promo_list: list
+    ) -> str:
+        """
+        Returns a campaign name
+
+        Args:
+            country_list (list): A list of countries
+            funnel_list (list): A list of funnels
+            promo_list (list): A list of promos
+
+        Returns:
+            str: A campaign name
+        """
+        self.country_value = choice(country_list)
+        self.funnel_value = choice(funnel_list)
+        return f"{self.country_value}_{self.date_value.year}_{self.funnel_value}_{choice(promo_list)}"
+
+    def placement_name(
+        self,
+        platform_list: list,
+        placement_format_list: list,
+    ) -> str:
+        """
+        Returns a placement name
+
+        Args:
+            platform_list (list): A list of funnels
+            placement_format_list (list): A list of funnels
+
+        Returns:
+            str: A placement name
+        """
+        return f"{self.country_value}_{self.date_value.year}_{self.funnel_value}_{choice(platform_list)}_{choice(placement_format_list)}"
+
+    def ad_name(self, message_list: list, division_list: list) -> str:
+        """
+        Returns an ad name
+
+        Args:
+            message_list (list): A list of messages
+            division_list (list): A list of division
+
+        Returns:
+            str: An ad name
+        """
+        return f"{self.date_value.month}.{self.date_value.day}_{choice(message_list)}_{choice(division_list)}"
