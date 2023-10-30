@@ -17,3 +17,8 @@ BCC_EMAIL_ADDRESS = "[add here]"
 EMAIL_LOGIN = "[add here]"
 EMAIL_PASSWORD = "[add here]"
 EMAIL_SUBJECT = "[add here]"
+
+# email footer
+SENDERS_FULL_NAME = "[add here]"
+SENDERS_PHONE_NUMBER = "[add here]"
+SENDERS_POSITION = "[add here]"
