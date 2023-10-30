@@ -74,11 +74,11 @@ def send_email(
     <br>
 
     <p style="color: rgb(34,34,34);line-height:1.38;margin-top:0pt;margin-bottom:0pt">
-        <span style="font-size:9pt;font-family:Arial;background-color:transparent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">Joshua Dienye</span>
+        <span style="font-size:9pt;font-family:Arial;background-color:transparent;font-weight:700;vertical-align:baseline;white-space:pre-wrap">{senders_full_name}</span>
     </p>
 
     <p style="color: rgb(34,34,34);line-height:1.38;margin-top:0pt;margin-bottom:0pt">
-        <span style="font-size:9pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">Data Engineer II</span>
+        <span style="font-size:9pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent;vertical-align:baseline;white-space:pre-wrap">{senders_position}</span>
     </p>
 
     <p style="color: rgb(34,34,34);line-height:1.38;margin-top:0pt;margin-bottom:0pt">
@@ -87,7 +87,7 @@ def send_email(
     </p>
 
     <p style="color: rgb(34,34,34);line-height:1.38;margin-top:0pt;margin-bottom:0pt">
-        <span style="font-size: 9pt;font-family:Arial;color: rgb(0, 0, 0); background-color:transparent;vertical-align: baseline;white-space: pre-wrap;">(510) 500-2570 | </span>
+        <span style="font-size: 9pt;font-family:Arial;color: rgb(0, 0, 0); background-color:transparent;vertical-align: baseline;white-space: pre-wrap;">{senders_phone_number} | </span>
         <a href="www.pmg.com" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.pmg.com/&source=gmail&ust=1668117647895000&usg=AOvVaw2K15_mZqxsYHALDL1k-AQi">
             <span style="font-size:9pt;font-family:Arial;background-color:transparent;vertical-align:baseline;white-space:pre-wrap">www.pmg.com</span>
         </a>

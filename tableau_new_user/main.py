@@ -31,13 +31,13 @@ def main():
         bcc_email_address = BCC_EMAIL_ADDRESS
 
         # saving the pwpush url as a variable
-        pwpush_url = get_pwpush_url(onepassword_password=password)
+        pwpush_url = get_pwpush_url(password=password)
 
         # saving the create_user function response as a variable
         user_response = create_user(
             new_user=email_address,
-            user_full_name=first_name + " " + last_name,
-            user_password=password,
+            full_name=first_name + " " + last_name,
+            password=password,
             group_name=group_name,
         )
 
